@@ -8,17 +8,17 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     
     <div style="width: 100%; background-color: orange;">
-      <P style="text-align: center; font-weight: bold;">current as of 11/15/2018</P>
+      <P style="text-align: center; font-weight: bold;">current as of 11/19/2018</P>
     </div>
 
   <header class="showcase">
       <div class="content">
-        <img src="GH_Logo_trans_318kb.png" class="logo" alt="Greater Highway Logo">
+        <img src="img/logo/GH_Logo_trans_318kb.png" class="logo" alt="Greater Highway Logo">
       
         <div class="title">Greater Highway
         </div>
@@ -31,45 +31,50 @@
 
       <main>
 
-        <nav>
-            <ul>
-                <li id="active-li"><a id="activeLink" href="index.html">Main</a></li>
-                <li><a href="#">Worship + Programs</a></li>
-                <li><a href="#">Get Involved</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
+        <nav id="navbar">
+          <ul>
+            <li id="active-li"><a id="activeLink" href="index.html">Main</a></li>
+            <li><a href="#">Worship + Programs</a></li>
+            <li><a href="#">Get Involved</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
         </nav>
 
-        <article>
-          <h2>Upcoming Events</h2>
+        <article id="event-section">
+          <h2>Upcoming Events
+          </h2>
           <hr>
-          <div>
+
+          <div id="cal-events">
+            <div>
               <h3>November</h3>
-              <h4>16</h4>
+              <h4>23</h4>
               <p>Transformation Class</p>
               <p>8pm</p>
-          </div>
+            </div>
       
-          <div>
-            <h3>November</h3>
-            <h4>18</h4>
-            <p>Sunday School</p>
-            <p>10:30am</p>
-          </div>
+            <div>
+              <h3>November</h3>
+              <h4>25</h4>
+              <p>Sunday School</p>
+              <p>10:30am</p>
+            </div>
         
-          <div>
-            <h3>November</h3>
-            <h4>18</h4>
-            <p>Sunday Worship</p>
-            <p>12pm</p>
+            <div>
+              <h3>November</h3>
+              <h4>25</h4>
+              <p>Sunday Worship</p>
+              <p>12pm</p>
+            </div>
           </div>
+          
         </article>
 
         <article>
             <div class="watchVids">
 
                 <h2>Worship with us</h2>
-                <a href="#">
+                <a href="www.youtube.com">
                 <button class="btn" type="button">Watch Sermons</button></a>
     
             </div>
@@ -82,14 +87,11 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, nesciunt vitae ea corrupti cum, ipsam doloribus aliquid, eius consequatur quas ratione ullam iure quae pariatur! Eos ab hic aperiam ipsam!</p>
                 </div>
                 <div class="pastorFeatureBox">
-                    <img src="richie-lugo137kb.jpg" alt="Thumbnail for Flexbox tutorial video">
+                    <img src="img/richie lugo/richie-lugo137kb.jpg" alt="Bishop Page Image">
                 </div>
             </div>
         </article>
 
-        <article>
-
-        </article>
         <div class="emailRow">
 
           <h2>Stay Informed</h2>
@@ -126,6 +128,7 @@
         
           <p><a href="https://www.google.com/maps/place/Greater+Highway+Deliverance/@43.108318,-75.2596127,17z/data=!3m1!4b1!4m5!3m4!1s0x89d940d046231be3:0x159fd5614fc4b9f2!8m2!3d43.108318!4d-75.257424" target="_blank">1705 Whitesboro Street, Utica, NY 13502</a>
           </p>
+          
         </div>
 
       </div>
@@ -138,7 +141,7 @@
         <a href="http://www.youtube.com"><i class="fab fa-youtube social-link"></i></a>
       </div>
           
-      <div class="copyrightRow">
+      <div id="copyrightRow">
           <p>
           Copyright &copy; <script type="text/javascript">
           document.write(new Date().getFullYear());
