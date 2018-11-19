@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700');
 
 :root {
   --colorPrune: #6E0D25;
@@ -9,9 +9,21 @@
   --colorBrownYellow: #CE8D66;
 
   --navRowDir: column;
+  --eventRowDir: column;
   --pastorRowDir: column;
   --footerContactDir: column;
+  --eventCalRowDir: column;
+
+  --activeLinkPlace: 1;
+  --calMargBottom: 0.7em;
+  --calMargRight: 0em;
+  --emailRowH2Size: 2.2em;
+  --topFooterPadding: 1em;
+  --rightFooterPadding: 1em;
+  --bottomFooterPadding: 1em;
+  --leftFooterPadding: 1em;
   --socialMediaLinkSize: 30px;
+
 }
 
 * {
@@ -28,6 +40,10 @@ body, html {
   color: #fff;
 }
 
+/*****************************************
+RESPONSIVE LARGER SCREEN SECTION
+******************************************/
+
 @media (min-width: 850px) {
   .showcase::after {
     transition: all 1000ms;
@@ -43,7 +59,68 @@ body, html {
     -webkit-filter: blur(2px);
   }
 
+  :root {
+    --navRowDir: row;
+    --eventRowDir: row;
+    --pastorRowDir: row;
+    --footerContactDir: row;
+    --eventCalRowDir: row;
+
+    --activeLinkPlace: 0;
+    --calMargBottom: 0em;
+    --calMargRight: 1.7em;
+    --emailRowH2Size: 3.5em;
+    --socialMediaLinkSize: 25px;
+    --topFooterPadding: 3em;
+    --rightFooterPadding: 2em;
+    --bottomFooterPadding: 0em;
+    --leftFooterPadding: 2em;
+  }
+/*
+Sticky nav bar to remain at top during scroll for large screen view
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+*/
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li:last-child {
+    padding-right: 1em;
+  }
+
+  nav a:hover, footer a:hover {
+    color: var(--colorDarkOrange);
+  }
+
+  #contact-links {
+    width: 100%;
+  }
+
+  #contact-links div {
+    flex: 1;
+  }
+
+  .sm_links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #copyrightRow {
+    width: 100%;
+    justify-content: center;
+  }
+
 }
+
+/*****************************************
+END OF RESPONSIVE SECTION
+******************************************/
 
 a {
   text-decoration: none;
@@ -55,7 +132,7 @@ a {
 }
 
 #active-li {
-  order: 1;
+  order: var(--activeLinkPlace);
 }
 
 button:hover {
@@ -132,6 +209,9 @@ nav {
   border-bottom: 0.2em solid var(--colorSpartanCrimson);
   border-top: 0.2em solid var(--colorSpartanCrimson);
   background-color: var(--colorPrune);
+  
+  font-family: "Open Sans";
+  font-size: 0.8em;
 }
 
 nav > ul {
@@ -140,10 +220,11 @@ nav > ul {
   align-items: center;
   flex-direction: var(--navRowDir);
   padding: 0;
+  margin: 0;
 }
 
 nav > ul > li {
-  padding: 0.4em;
+  padding: 0.3em;
 }
 
 ul {
@@ -154,25 +235,36 @@ ul {
 ARTICLE/EVENT SECTION
 ******************************************/
 
-article:nth-child(2) {
+#event-section {
   flex: 1;
   display: flex;
   flex-direction: column;
   background-color: var(--colorYellowOrange);
+  justify-content: center;
+  align-content: center;
   align-items: center;
   text-align: center;
   padding-bottom: 1.5em;
 }
 
-article:nth-child(2) div {
-  flex: 1;
+#cal-events {
   display: flex;
-  flex-direction: column;
-  background-color: #6E0D25;
-  margin-bottom: 0.7em;
-  padding: 0.5em;
+  flex-direction: var(--eventCalRowDir);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   width: 80%;
+}
+
+#cal-events div {
+  flex: 1;
+  width: 80%;
+  margin-bottom: var(--calMargBottom);
+  margin-right: var(--calMargRight);
+  padding: 0.5em;
   border-radius: 1em;
+
+  background-color: #6E0D25;
   color: var(--colorYellowOrange);
   text-shadow: 0px 0px 5px black;
 
@@ -181,14 +273,14 @@ article:nth-child(2) div {
   background: linear-gradient(to bottom,var(--colorSpartanCrimson), var(--colorPineapple), var(--colorPrune));
 }
 
-article:nth-child(2) hr {
+#event-section hr {
   border: 2px solid var(--colorSpartanCrimson);
   width: 55%;
   margin-bottom: 2em;
   padding: 0;
 }
 
-article:nth-child(2) h2 {
+#event-section h2 {
   text-transform: uppercase;
   letter-spacing: 0.5em;
   font-size: 1.8em;
@@ -196,30 +288,27 @@ article:nth-child(2) h2 {
   color: var(--colorSpartanCrimson);
   margin-bottom: 0.3em;
   text-shadow: 3px 3px 3px var(--colorDarkOrange);
+  text-align: center;
 }
 
-article:nth-child(2) h3 {
+#event-section h3 {
   font-weight: bold;
   font-size: 2.2em;
 }
 
-article:nth-child(2) h4 {
+#event-section h4 {
   font-weight: bold;
   font-size: 5.2em;
 }
 
-article:nth-child(2) h4, article:nth-child(2) h3 {
+#event-section h4, #event-section h3 {
   margin: 0;
 }
 
-article:nth-child(2) p {
+#event-section p {
   color: white;
   margin: 0;
   font-size: 1.5em;
-}
-
-article:nth-child(2) div:last-child {
-  margin-bottom: 0;
 }
 
 /*****************************************
@@ -232,14 +321,11 @@ ARTICLE/WATCH SECTION
   color: white;
   flex-direction: column;
   background-color: var(--colorDarkOrange);
-  /* background-image: url("/img/NYCBlue.jpg"); */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
   align-items: center;
   text-align: center;
   padding: 1em;
   text-shadow: 3px 3px 3px black;
+
 }
 
 .btn {
@@ -302,7 +388,7 @@ EMAIL SIGN UP SECTION
 }
 
 .emailRow h2 {
-  font-size: 2.7em;
+  font-size: var(--emailRowH2Size);
   letter-spacing: 0.2em;
   margin: 0;
   margin-bottom: 0.3em;
@@ -350,8 +436,15 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5em;
+  padding: var(--topFooterPadding) var(--rightFooterPadding) var(--bottomFooterPadding) var(--leftFooterPadding);
   text-align: center;
+  background-color: rgb(104, 99, 99);
+  color: white;
+  text-shadow: 0px 0px 2px black;
+}
+
+footer a {
+  color: white;
 }
 
 #contact-links {
@@ -360,9 +453,14 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-weight: 500;
 }
 
 .social-link {
   margin: 1em;
-  font-size: 30px;
+  font-size: var(--socialMediaLinkSize);
+}
+
+#copyrightRow {
+  font-size: 15px;
 }
