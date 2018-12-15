@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700');
+
+:root {
+  --colorPrune: #6E0D25;
+  --colorDarkOrange: #FF8811;
+  --colorSpartanCrimson: #A31717;
+  --colorYellowOrange: #F4AC45;
+  --colorPineapple: #51355A;
+  --colorBrownYellow: #CE8D66;
+
+  --navRowDir: column;
+  --events-direction: column;
+  --footerContactDir: column;
+  --eventCalRowDir: column;
+
+  --activeLinkPlace: 1;
+  --nav-font-size: 1.6em;
+  --nav-li-marg-vert:0.4em;
+  --nav-li-marg-hor: 0em;
+  --logoHeight: 43pt;
+  --logoWidth: 30pt;
+  --logo-text-font-size:0.8em;
+  --logo-margin-bottom: -15px;
+  --main-top-margin: 0;
+
+  /* REOCURRING EVENTS */
+  --events-top-padding: 1em;
+  --eb-min-height: 200px;
+  --eb-marg-bot: 1em;
+  --eb-marg-right: 0;
+  --eb-info-gen-marg-bot: -4px;
+  --eb-info-font: 1em;
+  --eb-word-font: 1.6em;
+  --eb-eventDay-font: 2em;
+  --eb-eventDay-width: 60%;
+
+  /* SERMONS */
+  --sermon-date-flex-order: 1;
+  --sermon-info-flex-order: 2;
+  --sermon-date-font-size: 1.1em;
+  --sermon-info-h3-font-size: 1.3em;
+  --sermon-item-flex-direction: column;
+  --sermon-h3-text-align: center;
+
+  /* PRAYER */
+  --pray-h2-font-size: 2em;
+  --pray-main-desc-line-height: 1.3em;
+  --pray-item-marg-top: 4em;
+  --pray-item-container-flex-dir: column;
+  --prayer-sec-flex-direction: column;
+
+  --calMargBottom: 0.7em;
+  --calMargRight: 0em;
+  --emailRowH2Size: 2.2em;
+
+  --topFooterPadding: 1em;
+  --rightFooterPadding: 1em;
+  --bottomFooterPadding: 1em;
+  --leftFooterPadding: 1em;
+  --socialMediaLinkSize: 30px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  background:white;
+  color: #fff;
+}
+
+/*****************************************
+RESPONSIVE LARGER SCREEN SECTION
+******************************************/
+
+@media (min-width: 767px) {
+
+  :root {
+    --navRowDir: row;
+    --events-direction: row;
+    --pastorRowDir: row;
+    --footerContactDir: row;
+    --eventCalRowDir: row;
+
+    --activeLinkPlace: 0;
+    --nav-font-size: 1.1em;
+    --nav-li-marg-vert:0em;
+    --nav-li-marg-hor: 0.7em;
+    --nav-marg-bottom: 5em;
+    --logoHeight: 43pt;
+    --logoWidth: 30pt;
+    --logo-text-font-size:1.5em;
+    --logo-margin-bottom: 0;
+    --main-top-margin: 84.7px;
+
+    /* REOCURRING EVENTS */
+    --eb-min-height: 270px;
+    --eb-marg-bot: 0;
+    --eb-marg-right: 1em;
+    --eb-info-gen-marg-bot: -11px;
+    --eb-info-font: 1.5em;
+    --eb-word-font: 2.7em;
+    --eb-eventDay-font: 2.7em;
+    --eb-eventDay-width: 60%;
+
+    /* SERMONS */
+    --sermon-date-flex-order: 2;
+    --sermon-info-flex-order: 1;
+    --sermon-date-font-size: 1.7em;
+    --sermon-info-h3-font-size: 1.7em;
+    --sermon-item-flex-direction: row;
+    --sermon-h3-text-align: left;
+
+    /* PRAYER */
+    --pray-h2-font-size: 4em;
+    --pray-main-desc-line-height: 1.7em;
+    --pray-item-marg-top: 0;
+    --pray-item-container-flex-dir: row;
+    --prayer-sec-flex-direction: column;
+
+    --calMargBottom: 0em;
+    --calMargRight: 1.7em;
+    --emailRowH2Size: 3.5em;
+    --socialMediaLinkSize: 25px;
+
+    --topFooterPadding: 3em;
+    --rightFooterPadding: 2em;
+    --bottomFooterPadding: 0em;
+    --leftFooterPadding: 2em;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: var(--nav-marg-bottom);
+  }
+
+  #logo-li {
+      flex: 1;
+      margin-bottom: var(--logo-margin-bottom);
+  }
+
+  .text-logo {
+      flex: 16;
+      font-size: var(--logo-text-font-size);
+      margin-left: 0;
+  }
+
+  nav ul li {
+    margin: var(--nav-li-marg-vert) var(--nav-li-marg-hor);
+  }
+
+  nav a:hover, footer a:hover {
+    color: var(--colorDarkOrange);
+  }
+
+/*****************************************
+ROUTINE EVENTS SECTION
+******************************************/
+
+  #reocurring-events {
+      padding-top: var(--events-top-padding);
+      flex-direction: var(--events-direction);
+      flex-wrap: wrap;
+  }
+
+  .event-blurb {
+    flex: 1 1 33.33%;
+    min-height: var(--eb-min-height);
+  }
+
+  .eb-marg {
+    margin-bottom: var(--eb-marg-bot);
+    margin-right: var(--eb-marg-right);
+  }
+
+  .eb-info-general {
+    margin-bottom: var(--eb-info-gen-marg-bot);
+  }
+
+  .eb-info {
+    font-size: var(--eb-info-font);
+  }
+
+  .eb-word {
+    font-size: var(--eb-word-font);
+  }
+
+  .eventDay {
+    font-size: var(--eb-eventDay-font);
+    width: var(--eb-eventDay-width);
+  }
+
+/*****************************************
+SERMON SECTION
+******************************************/
+
+.sermon-item {
+  flex-direction: var(--sermon-item-flex-direction);
+}
+
+.sermon-info {
+  order: var(--sermon-info-flex-order);
+}
+
+.sermon-date {
+  order: var(--sermon-date-flex-order);
+}
+
+.sermon-info h3 {
+  font-size: var(--sermon-info-h3-font-size);
+  text-align: var(--sermon-h3-text-align);
+}
+
+.sermon-date h3 {
+  font-size: var(--sermon-date-font-size);
+}
+
+/*****************************************
+PRAYER SECTION
+******************************************/
+
+#prayer-section {
+  flex-direction: var(--prayer-sec-flex-direction);
+}
+
+#prayer-section > p {
+  line-height: var(--pray-main-desc-line-height);
+}
+
+#pray-item-container {
+  flex-direction: var(--pray-item-container-flex-dir);
+  justify-content: space-around;
+}
+
+.prayer-item:last-child {
+  margin-top: var(--pray-item-marg-top);
+}
+
+/*****************************************
+FOOTER SECTION
+******************************************/
+
+  #contact-links {
+    width: 100%;
+  }
+
+  #contact-links div {
+    flex: 1;
+  }
+
+  .sm_links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #copyrightRow {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+/*****************************************
+END OF RESPONSIVE SECTION
+******************************************/
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#activeLink {
+  color: var(--colorDarkOrange);
+}
+
+#active-li {
+  order: var(--activeLinkPlace);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#logo {
+    height: var(--logoHeight);
+    width: var(--logoWidth);
+  }
+
+/*****************************************
+NAV
+******************************************/
+
+nav {
+  display: flex;
+
+  padding: 0.5em;
+  border-bottom: 0.2em solid var(--colorSpartanCrimson);
+  border-top: 0.2em solid var(--colorSpartanCrimson);
+  background-color: var(--colorPrune);
+  
+  font-family: "Open Sans";
+}
+
+nav > ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--navRowDir);
+
+  font-size: var(--nav-font-size);
+  padding: 0;
+  margin: 0;
+}
+
+#logo-li {
+    margin-bottom: var(--logo-margin-bottom);
+    padding: 0;
+}
+
+.text-logo {
+    font-family: "Montserrat";
+    font-size: var(--logo-text-font-size);
+    font-weight: bold;
+    color: var(--colorYellowOrange);
+}
+
+nav ul li:first-child {
+    margin-top: 0;
+    padding: 0;
+}
+
+nav  ul  li {
+    margin: var(--nav-li-marg-vert) var(--nav-li-marg-hor);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*****************************************
+MAIN SECTION
+******************************************/
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0;
+  margin: var(--main-top-margin) 0 0 0;
+  background-color: rgb(104, 99, 99);
+
+}
+
+/*****************************************
+ROUTINE EVENTS SECTION
+******************************************/
+
+#reoccuring-events {
+width: 90%;
+margin-top: 1em;
+margin-bottom: 1em;
+padding: 0;
+
+display: flex;
+flex-direction: var(--events-direction);
+align-items: center;
+}
+
+#worship-img {
+  background-image: url("../img/bible_pulpit/bible_pulpit_102kb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#school-img {
+  background-image: url("../img/class/auditorium-benches_152kb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#trans-class-img {
+background-image: url("../img/engaged_ppl/engaged_ppl_108kb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.event-blurb {
+    background-color: white;
+    width: 80%;
+    border-radius: 0.2em;
+
+    border: 0.7px solid var(--colorPineapple);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 7px 6px rgba(0,0,0,0.23);
+
+    display: flex;
+    flex-direction: column;
+    min-height: var(--eb-min-height);
+}
+
+.eb-marg {
+  margin-bottom: var(--eb-marg-bot);
+  margin-right: var(--eb-marg-right);
+}
+
+#reoccuring-events p {
+    background-color: rgba(81, 53, 90, 0.87);
+    border-radius: 2px;
+    text-shadow: 0px 0px 2px black;
+}
+
+.eb-info-general {
+  margin-right: auto;
+  margin-top: 0.4em;
+  margin-bottom: var(--eb-info-gen-marg-bot);
+  width: 65%;
+}
+
+.eb-info {
+  font-size: var(--eb-info-font);
+  line-height: 1.5em;
+  font-weight: 500;
+
+  padding-left: 0.3em;
+}
+
+.eb-word {
+  font-size: var(--eb-word-font);
+  font-weight: 500;
+  line-height: 1.3em;
+  letter-spacing: 0.2em;
+  text-align: right;
+}
+
+.eventDay {
+  font-size: var(--eb-eventDay-font);
+  font-weight: bold;
+  line-height: 1.4em;
+
+  margin-top: auto;
+  margin-left: auto;
+  text-align: right;
+  width: var(--eb-eventDay-width);
+  padding-right: 0.3em;
+  margin-bottom: 0.4em;
+}
+
+/*****************************************
+SERMON SECTION
+******************************************/
+
+#sermon-list {
+  background-color: var(--colorYellowOrange);
+  padding: 1em;
+  width: 100%;
+  color: black;
+  text-shadow: 1px 0px 1px white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sermon-list h2 {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0.9em;
+  font-size: 2.3em;
+}
+
+#sermon-list a {
+  color: black;
+}
+
+.sermon-item {
+  width: 90%;
+  margin-bottom: 0.7em;
+  padding-top: 1em;
+  border-top: 2px solid white;
+
+  display: flex;
+  flex-direction: var(--sermon-item-flex-direction);
+  align-items: center;
+}
+
+.sermon-item:last-child {
+  border-bottom: 2px solid white;
+}
+
+.sermon-item #last-p {
+  margin-bottom: 1em;
+}
+
+.sermon-info {
+  order: var(--sermon-info-flex-order);
+  flex: 1;
+}
+
+.sermon-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  font-size: var(--sermon-info-h3-font-size);
+  line-height: 1.5em;
+  text-align: var(--sermon-h3-text-align);
+}
+
+.sermon-info p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+
+  font-size: 1.0em;
+}
+
+.sermon-date {
+  order: var(--sermon-date-flex-order);
+  font-size: 1.3em;
+  flex: 1;
+  }
+
+  .sermon-date h3 {
+    margin: 0;
+    font-size: var(--sermon-date-font-size);
+  }
+
+/*****************************************
+PRAYER SECTION
+******************************************/
+
+#prayer-section {
+  display: flex;
+  flex-direction: var(--prayer-sec-flex-direction);
+  align-items: center;
+  
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+
+  color: black;
+  background-color: darkgray;
+}
+
+#prayer-section h2 {
+  font-size: var(--pray-h2-font-size);
+  font-weight: 500;
+  letter-spacing: 0.5em;
+
+  margin: 0;
+}
+
+#prayer-section h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+  padding-left: 0.3em;
+  margin-top: 0.6em;
+  margin-bottom: 0.1em;
+}
+
+#prayer-section hr {
+  width: 25%;
+  background-color: black;
+  border: 1px solid black;
+}
+
+#prayer-section > p {
+  width: 70%;
+  font-size: 0.9em;
+
+  margin-top: 2.5em;
+  margin-bottom: 3em;
+
+  text-align: justify;
+  line-height: var(--pray-main-desc-line-height);
+}
+
+#prayer-section img {
+  border: 10px solid white;
+  border-radius: 1%;
+}
+
+#pray-item-container {
+  display: flex;
+  flex-direction: var(--pray-item-container-flex-dir);
+
+  width: 85%;
+}
+
+.prayer-item:last-child {
+  margin-top: var(--pray-item-marg-top);
+}
+
+.prayer-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.prayer-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.prayer-text {
+  order: 2;
+}
+
+.prayer-text p {
+  font-size: 1.2em;
+  padding-left: 0.3em;
+  margin: 0;
+}
+
+/*****************************************
+FOOTER SECTION
+******************************************/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--topFooterPadding) var(--rightFooterPadding) var(--bottomFooterPadding) var(--leftFooterPadding);
+  text-align: center;
+  background-color: rgb(104, 99, 99);
+  color: white;
+  text-shadow: 0px 0px 2px black;
+}
+
+footer a {
+  color: white;
+}
+
+#contact-links {
+  display: flex;
+  flex-direction: var(--footerContactDir);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.social-link {
+  margin: 1em;
+  font-size: var(--socialMediaLinkSize);
+}
+
+#copyrightRow {
+  font-size: 15px;
+}
