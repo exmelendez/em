@@ -378,21 +378,21 @@ align-items: center;
 }
 
 #worship-img {
-  background-image: url("../img/bible_pulpit/bible_pulpit_102kb.jpg");
+  background-image: url("bible_pulpit_102kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #school-img {
-  background-image: url("../img/class/auditorium-benches_152kb.jpg");
+  background-image: url("auditorium-benches_152kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #trans-class-img {
-background-image: url("../img/engaged_ppl/engaged_ppl_108kb.jpg");
+background-image: url("engaged_ppl_108kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
