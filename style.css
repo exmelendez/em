@@ -56,6 +56,8 @@ MOBILE ROOT
   --donate-width: 91%;
   --scripture-font-size: 0.7em;
   --script-heading-fs: 0.8em;
+  --donate-btn-font-color: #F4AC45;
+  --donate-btn-bg-color: rgb(104, 99, 99);
 
   /* VOLUNTEER - MOBILE | involved.html */
   --volunteer-head-fs: 1.1em;
@@ -143,6 +145,8 @@ FULL ROOT
     --donate-width: 77%;
     --scripture-font-size: 1.5em;
     --script-heading-fs: 1em;
+    --donate-btn-font-color: white;
+    --donate-btn-bg-color: transparent;
 
     /* VOLUNTEER | involved.html */
     --volunteer-head-fs: 1.8em;
@@ -280,6 +284,17 @@ DONATE SECTION - FULL | involved.html
 
 #scripture-heading {
   font-size: var(--script-heading-fs);
+}
+
+#donate-btn {
+  color: var(--donate-btn-font-color);
+  background-color: var(--donate-btn-bg-color);
+}
+
+#donate-btn:hover {
+  color: var(--colorYellowOrange);
+  background-color: rgb(104, 99, 99);
+  cursor: pointer;
 }
 
 /*****************************************
@@ -716,13 +731,11 @@ DONATE SECTION | involved.html
   margin-top: 0.9em;
 
   box-shadow: 7px 10px 0px 1px rgba(63,67,89,1);
+
+  color: var(--donate-btn-font-color);
+  background-color: var(--donate-btn-bg-color);
 }
 
-#donate-btn:hover {
-  color: var(--colorYellowOrange);
-  background-color: rgb(104, 99, 99);
-  cursor: pointer;
-}
 
 #donate-btn p {
   font-family: "Open Sans";
