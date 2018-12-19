@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700|Corben:400');
 
+/******************************************  
+MOBILE ROOT
+********************************************/
 :root {
   --colorPrune: #6E0D25;
   --colorDarkOrange: #FF8811;
@@ -49,6 +52,15 @@
   --pray-item-container-flex-dir: column;
   --prayer-sec-flex-direction: column;
 
+  /* DONATE | involved.html */
+  --donate-width: 91%;
+  --scripture-font-size: 0.7em;
+  --script-heading-fs: 0.8em;
+
+  /* VOLUNTEER - MOBILE | involved.html */
+  --volunteer-head-fs: 1.1em;
+  --volunteer-head-marg-bot: 1em;
+
   --calMargBottom: 0.7em;
   --calMargRight: 0em;
   --emailRowH2Size: 2.2em;
@@ -81,6 +93,9 @@ RESPONSIVE LARGER SCREEN SECTION
 
 @media (min-width: 767px) {
 
+/******************************************  
+FULL ROOT
+********************************************/
   :root {
     --navRowDir: row;
     --events-direction: row;
@@ -123,6 +138,15 @@ RESPONSIVE LARGER SCREEN SECTION
     --pray-item-marg-top: 0;
     --pray-item-container-flex-dir: row;
     --prayer-sec-flex-direction: column;
+
+    /* DONATE | involved.html */
+    --donate-width: 77%;
+    --scripture-font-size: 1.5em;
+    --script-heading-fs: 1em;
+
+    /* VOLUNTEER | involved.html */
+    --volunteer-head-fs: 1.8em;
+    --volunteer-head-marg-bot: 0.5em;
 
     --calMargBottom: 0em;
     --calMargRight: 1.7em;
@@ -245,7 +269,31 @@ PRAYER SECTION
 }
 
 /*****************************************
-FOOTER SECTION
+DONATE SECTION - FULL | involved.html
+******************************************/
+
+#donate > p:first-of-type { 
+  width: var(--donate-width);
+
+  font-size: var(--scripture-font-size);
+}
+
+#scripture-heading {
+  font-size: var(--script-heading-fs);
+}
+
+/*****************************************
+VOLUNTEER SECTION - FULL | involved.html
+******************************************/
+
+#volunteer-heading {
+  font-size: var(--volunteer-head-fs);
+
+  margin-bottom: var(--volunteer-head-marg-bot);
+}
+
+/*****************************************
+FOOTER SECTION - FULL
 ******************************************/
 
   #contact-links {
@@ -623,7 +671,154 @@ PRAYER SECTION
 }
 
 /*****************************************
-FOOTER SECTION
+DONATE SECTION | involved.html
+******************************************/
+
+#donate {
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url(heart_sand_footsteps_137kb.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 1em;
+}
+
+#scripture-heading {
+  font-family: Corben;
+  font-size: var(--script-heading-fs);
+  margin: 0;
+}
+
+#donate > p:first-of-type {
+  width: var(--donate-width);
+
+  font-size: var(--scripture-font-size);
+
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+#donate-img {
+  height: 40px;
+  width: 52px;
+}
+
+#donate-btn {
+  padding: 0.3em 1.3em;
+  border: 2px solid  rgba(63,67,89,1);
+  margin-top: 0.9em;
+
+  box-shadow: 7px 10px 0px 1px rgba(63,67,89,1);
+}
+
+#donate-btn:hover {
+  color: var(--colorYellowOrange);
+  background-color: rgb(104, 99, 99);
+  cursor: pointer;
+}
+
+#donate-btn p {
+  font-family: "Open Sans";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7em;
+
+  margin: 0;
+}
+
+/*****************************************
+VOLUNTEER SECTION - MOBILE | involved.html
+******************************************/
+
+#volunteer-opps {
+  width: 100%;
+  background-color: white;
+  color: var(--colorPineapple);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1em;
+}
+
+#volunteer-opps h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  font-family: "Open Sans";
+
+  margin-bottom: 0.6em;
+}
+
+#volunteer-opps .ast {
+  font-size: 0.5em;
+}
+
+#volunteer-heading {
+  width: 85%;
+
+  font-size: var(--volunteer-head-fs);
+  text-align: center;
+  letter-spacing: 0.1em;
+  line-height: 1.8em;
+
+  margin-bottom: var(--volunteer-head-marg-bot);
+}
+
+#volunteer-opps > p:first-of-type { 
+  width: 76%;
+
+  text-align: justify;
+  line-height: 1.8em;
+}
+
+#volunteer-opps > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  color: black;
+
+  width: 90%;
+}
+
+#volunteer-opps div > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  border-radius: 0.5em;
+  border-top: 8px solid  var(--colorPineapple);
+  box-shadow: 1px 1px 7px 3px rgb(0, 0, 0, 0.1);
+
+  margin: 0.5em;
+  padding: 1.1em;
+
+  max-width: 16em;
+
+  line-height: 1.6em;
+}
+
+#volunteer-opps div > div P {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.vc-img {
+  height: 13em;
+  width: 13em;
+  align-self: center;
+}
+
+/*****************************************
+FOOTER SECTION - MOBILE
 ******************************************/
 
 footer {
