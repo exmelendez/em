@@ -13,8 +13,8 @@ body {
 }
 
 .loginbox {
-    width: 90%;
-    height: 90%;
+    width: 50%;
+    height: 50%;
     background: #000;
     color: #fff;
     top: 50%;
@@ -38,7 +38,7 @@ h1 {
     margin: 0;
     padding: 0 0 40px;
     text-align: center;
-    font-size: 22px;
+    font-size: 2em;
 }
 
 .loginbox p {
