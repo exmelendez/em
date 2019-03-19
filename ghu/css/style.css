@@ -73,6 +73,21 @@ MOBILE ROOT
   --leftFooterPadding: 1em;
   --socialMediaLinkSize: 30px;
 
+  /* WHY WE DO - MOBILE | about.html */
+  --collapse-Heading-fs: 1.3em;
+
+  /* OUR MINISTER - MOBILE | about.html */
+    --minister-title: 1.5em;
+    --minister-title-line-length: 60px;
+    --minister-title-line-height: 5px;
+    --minister-name-font-size: 1.3em;
+    --darren-img: 100%;
+    --bishop-bio-p: 0.9em;
+    --read-more-visability: flex;
+    --bio-extra-visability: none;
+
+    /* MAP - MOBILE | about.html */
+    --map-box-flex-pos: center;
 }
 
 * {
@@ -161,6 +176,22 @@ FULL ROOT
     --rightFooterPadding: 2em;
     --bottomFooterPadding: 0em;
     --leftFooterPadding: 2em;
+
+    /* WHY WE DO - FULL | about.html */
+    --collapse-Heading-fs: 1.5em;
+
+    /* OUR MINISTER - FULL | about.html */
+    --minister-title: 3.5em;
+    --minister-title-line-length: 300px;
+    --minister-title-line-height: 12px;
+    --minister-name-font-size: 1.8em;
+    --darren-img: 40%;
+    --bishop-bio-p: 1em;
+    --read-more-visability: none;
+    --bio-extra-visability: inline;
+
+    /* MAP - MOBILE | about.html */
+    --map-box-flex-pos: flex-start;
   }
 
   nav {
@@ -168,6 +199,7 @@ FULL ROOT
     top: 0;
     width: 100%;
     margin-bottom: var(--nav-marg-bottom);
+    z-index: 500;
   }
 
   #logo-li {
@@ -289,6 +321,12 @@ DONATE SECTION - FULL | involved.html
 #donate-btn {
   color: var(--donate-btn-font-color);
   background-color: var(--donate-btn-bg-color);
+  position: relative;
+}
+
+
+#donate-btn:active {
+  top: 2px;
 }
 
 #donate-btn:hover {
@@ -306,6 +344,62 @@ VOLUNTEER SECTION - FULL | involved.html
 
   margin-bottom: var(--volunteer-head-marg-bot);
 }
+
+/*****************************************
+WHY WE DO SECTION - FULL - about.html
+******************************************/
+
+.collapsible {
+  cursor: pointer;
+  font-size: var(--collapse-Heading-fs);
+}
+
+.fancy {
+  font-size: var(--minister-title);
+}
+
+.fancy span:before,
+.fancy span:after {
+  height: var(--minister-title-line-height);
+  width: var(--minister-title-line-length);
+}
+
+#bishop-bio {
+  overflow: auto;
+}
+
+#bishop-name {
+  font-size: var(--minister-name-font-size);
+}
+
+#bishop-bio p {
+  margin: 0.4em 0em;
+  font-size: var(--bishop-bio-p);
+}
+
+#bishop-bio img {
+  width: var(--darren-img);
+  margin: 0.8em 1em 0 0;
+  padding: 0;
+  float: left;
+}
+
+/* read more section */
+#more-bio-btn {
+  display: var(--read-more-visability);
+}
+
+#full-bio-p {
+  display: var(--bio-extra-visability);
+}
+
+/*****************************************
+MAP SECTION - FULL - about.html
+******************************************/
+#mapSection {
+  align-items: var(--map-box-flex-pos);
+}
+
 
 /*****************************************
 FOOTER SECTION - FULL
@@ -441,21 +535,21 @@ align-items: center;
 }
 
 #worship-img {
-  background-image: url("bible_pulpit_102kb.jpg");
+  background-image: url("../bible_pulpit_102kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #school-img {
-  background-image: url("auditorium-benches_152kb.jpg");
+  background-image: url("../auditorium-benches_152kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #trans-class-img {
-background-image: url("engaged_ppl_108kb.jpg");
+  background-image: url("../engaged_ppl_108kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -698,7 +792,7 @@ DONATE SECTION | involved.html
   flex-direction: column;
   align-items: center;
 
-  background-image: url(heart_sand_footsteps_137kb.jpg);
+  background-image: url(../heart_sand_footsteps_137kb.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -828,6 +922,250 @@ VOLUNTEER SECTION - MOBILE | involved.html
   height: 13em;
   width: 13em;
   align-self: center;
+}
+
+/*****************************************
+WHY WE DO SECTION - MOBILE - about.html
+******************************************/
+
+#learn-us {
+  width: 100%;
+}
+
+/* START OF COLLAPSABLE SECTION */
+.collapsible {
+  color: var(--colorPineapple);
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: var(--collapse-Heading-fs);
+  font-weight: bold;
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-size: 1.3em;
+  margin-left: 15px;
+  color: var(--colorSpartanCrimson);
+}
+
+.active:after {
+  content: "\2212";
+  font-size: 1.3em;
+  color: var(--colorSpartanCrimson);
+  margin-left: 15px;
+}
+
+.active, .collapsible:hover {
+  /* background-color: #555; */
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #d0d0d0c4;
+  color: var(--colorSpartanCrimson);
+}
+
+/* END OF COLLAPSABLE SECTION */
+
+.qs {
+  font-weight: bold;
+}
+
+#four-es {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#faith-heading {
+  font-weight: bold;
+}
+
+#faith-statement li {
+  margin-bottom: 1.1em;
+}
+
+.creed-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+/*****************************************
+ABOUT PASTOR - MOBILE - about.html
+******************************************/
+
+#about-pastor {
+  width: 100%;
+  background-color: var(--colorDarkOrange);
+  padding: 0;
+  margin: 0;
+}
+
+.content-container {
+  max-width: 95%;
+  overflow: hidden;
+  margin: 0 auto 0.7rem;
+}
+
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+  font-size: var(--minister-title);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 2px black;
+  margin-bottom: 0.3em;
+}
+.fancy span {
+  position: relative;  
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: var(--minister-title-line-height);
+  border-bottom: 1px solid white;
+  width: var(--minister-title-line-length);
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  margin-left: 15px;
+}
+
+.bishop-bio-container {
+  overflow: auto;
+  padding-bottom: 1em;
+}
+
+#bishop-name {
+  text-align: center;
+  font-size: var(--minister-name-font-size);
+  font-weight: 400;
+  text-shadow: 0px 0px 2px black;
+  margin: 0;
+}
+
+
+#bishop-bio img {
+ width: var(--darren-img);
+ height: auto;
+ border: 1px solid white;
+ box-shadow: 0 2px 2px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23);
+}
+
+#bishop-bio {
+  margin: 0;
+  color: black;
+  padding: 1.5em;
+}
+
+#bishop-bio p {
+  line-height: 1.7rem;
+  font-size: var(--bishop-bio-p);
+}
+
+/* read more section */
+#more-bio-btn {
+  display: var(--read-more-visability);
+  width: 80%;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2em;
+  text-shadow: 2px 2px 5px black;
+  padding: 0;
+  color: white;
+
+  font-size: 1.2em;
+
+  min-width: 48px;
+  min-height: 48px;
+  background-color: transparent;
+  border: none;
+}
+
+#more-bio-btn #read-more-arrow{
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 2.1em;
+}
+
+#more-bio-btn p {
+  margin-bottom: 0;
+}
+
+#full-bio-p {
+  display: var(--bio-extra-visability);
+}
+
+#r-less {
+  display: none;
+}
+
+
+/*****************************************
+MAP SECTION - MOBILE - about.html
+******************************************/
+
+#mapSection {
+  width: 100%;
+  height: 25em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: var(--map-box-flex-pos);
+
+  color: white;
+
+  background: url(../GH_Map_img_2.png) no-repeat fixed;
+  background-size: 100%;
+  background-position: center;
+
+  text-align: center;
+  padding: 2em;
+}
+
+.addressBox {
+  padding: 1em;
+  width: auto;
+  height: auto;
+  background-color: #1b577c;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.addressBox h1, .addressBox p {
+  margin: 0;
+  text-shadow: 0px 0px 5px black;
+}
+
+.addressBox h1 {
+  line-height: 3rem;
+  word-spacing: 0.2em;
+}
+
+.addressBox a {
+  text-decoration: none;
+  color: white;
+}
+
+.addressBox p:nth-child(3) {
+  margin-top: 1.5em;
+}
+
+.addressBox p:nth-child(5) {
+  margin-top: 1.5em;
 }
 
 /*****************************************
