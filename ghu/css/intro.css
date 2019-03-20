@@ -153,7 +153,7 @@ HERO/WELCOME SECTION
   content:'';
   height: 70vh;
   width: 100%;
-  background-image: url(benches-chapel_237kb.jpg);
+  background-image: url(../img/benches-chapel_237kb.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -377,7 +377,7 @@ EMAIL SIGN UP SECTION
   display: flex;
   flex-direction: column;
   color: white;
-  background-image: url("apple-devices79kb.jpg");
+  background-image: url("../img/apple-devices79kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
