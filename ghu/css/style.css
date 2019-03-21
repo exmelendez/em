@@ -535,21 +535,21 @@ align-items: center;
 }
 
 #worship-img {
-  background-image: url("../bible_pulpit_102kb.jpg");
+  background-image: url("../img/bible_pulpit_102kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #school-img {
-  background-image: url("../auditorium-benches_152kb.jpg");
+  background-image: url("../img/auditorium-benches_152kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #trans-class-img {
-  background-image: url("../engaged_ppl_108kb.jpg");
+  background-image: url("../img/engaged_ppl_108kb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -792,7 +792,7 @@ DONATE SECTION | involved.html
   flex-direction: column;
   align-items: center;
 
-  background-image: url(../heart_sand_footsteps_137kb.jpg);
+  background-image: url(../img/heart_sand_footsteps_137kb.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -1128,7 +1128,7 @@ MAP SECTION - MOBILE - about.html
 
   color: white;
 
-  background: url(../GH_Map_img_2.png) no-repeat fixed;
+  background: url(../img/GH_Map_img_2.png) no-repeat fixed;
   background-size: 100%;
   background-position: center;
 
