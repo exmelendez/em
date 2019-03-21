@@ -1,3 +1,0 @@
-function folderSetup() {
-  return "setup";
-}
