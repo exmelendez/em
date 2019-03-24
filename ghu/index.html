@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     
     <link rel="stylesheet" href="css/intro.css">
+    <script src="js/index.js" async></script>
   </head>
   <body>
-    
-    <div style="width: 100%; background-color: orange;">
-      <P style="text-align: center; font-weight: bold;">current as of 3/19/2019</P>
-    </div>
 
   <header class="showcase">
       <div class="content">
@@ -74,7 +71,7 @@
             <div class="watchVids">
 
                 <h2>Worship with us</h2>
-                <a href="www.youtube.com">
+                <a href="programs.html#sermon-list">
                 <button class="btn" type="button">Watch Sermons</button></a>
     
             </div>
@@ -82,12 +79,12 @@
 
         <article>
             <div class="pastorFeatureRow">
-                <div class="pastorFeatureBox">
+                <div  class="pastorFeatureBox">
                     <h1>Bishop Darren Page</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, nesciunt vitae ea corrupti cum, ipsam doloribus aliquid, eius consequatur quas ratione ullam iure quae pariatur! Eos ab hic aperiam ipsam!</p>
+                    <p id="pastor-feature-bio">Called and anointed Pastor Darren L. Page is a servant of God. Faithful to his purpose in the Body of Christ, he is proclaiming the infallible Word of God through the ministry of preaching, teaching and . . .</p>
                 </div>
                 <div class="pastorFeatureBox">
-                    <img src="img/richie-lugo137kb.jpg" alt="Bishop Page Image">
+                    <img id="pastor-feature-img" src="img/richie-lugo137kb.jpg" alt="Bishop Page Image">
                 </div>
             </div>
         </article>
@@ -96,18 +93,12 @@
 
           <h2>Stay Informed</h2>
           
-          <div class="emailForm">
-            
-            <form action="https://mailthis.to/exmelendez@gmail.com" method="POST">  
-              <input type="email" name="_replyto" placeholder="enter email address"> 
-              <input type="submit" value="Send">
-            </form> 
-            
-              <!--
-              <input type="text" placeholder="enter email address">
-              <button>Sign Up</button>
-              -->
-          </div>                     
+          <form action="https://formspree.io/exmelendez@gmail.com" method="POST">
+            <div class="emailForm">
+                  <input type="email" name="_replyto" placeholder="enter email address">
+                  <button type="submit" value="Send">Sign Up</button>
+            </div>  
+          </form>                   
         </div>
 
       </main>
@@ -156,7 +147,6 @@
           </script> Greater Highway Deliverance Church.
           </p>
       </div>
-    
     </footer>
 
   </body>
