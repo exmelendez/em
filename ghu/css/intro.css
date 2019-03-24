@@ -76,15 +76,6 @@ RESPONSIVE LARGER SCREEN SECTION
     --bottomFooterPadding: 0em;
     --leftFooterPadding: 2em;
   }
-/*
-Sticky nav bar to remain at top during scroll for large screen view
-
-  #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-*/
 
   nav ul {
     justify-content: center;
@@ -114,6 +105,10 @@ Sticky nav bar to remain at top during scroll for large screen view
   #copyrightRow {
     width: 100%;
     justify-content: center;
+  }
+
+  #cal-events div {
+    height: 15.1em;
   }
 
 }
@@ -239,6 +234,7 @@ ARTICLE/EVENT SECTION
   flex: 1;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   background-color: var(--colorYellowOrange);
   justify-content: center;
   align-content: center;
@@ -257,7 +253,6 @@ ARTICLE/EVENT SECTION
 }
 
 #cal-events div {
-  flex: 1;
   width: 80%;
   margin-bottom: var(--calMargBottom);
   margin-right: var(--calMargRight);
@@ -292,17 +287,16 @@ ARTICLE/EVENT SECTION
 }
 
 #event-section h3 {
-  font-weight: bold;
   font-size: 2.2em;
 }
 
 #event-section h4 {
-  font-weight: bold;
   font-size: 5.2em;
 }
 
 #event-section h4, #event-section h3 {
   margin: 0;
+  font-weight: bold;
 }
 
 #event-section p {
@@ -395,6 +389,10 @@ EMAIL SIGN UP SECTION
   text-shadow: 2px 5px 15px black;
 }
 
+.emailRow form {
+  width: 70%;
+}
+
 .emailForm {
   display: flex;
   flex-direction: column;
@@ -402,7 +400,7 @@ EMAIL SIGN UP SECTION
   align-items: center;
 }
 
-.emailForm > input[type="text"] {
+.emailForm > input[type="email"] {
   flex: 8;
   border: none;
   padding: 1.2em;
@@ -422,7 +420,7 @@ EMAIL SIGN UP SECTION
   font-size: 1rem;
   text-transform: uppercase;
   margin-top: 1em;
-  width: 40%;
+  width: 50%;
   border-radius: 0.2em;
   text-shadow: 2px 1px 1px black;
 }
@@ -463,4 +461,12 @@ footer a {
 
 #copyrightRow {
   font-size: 15px;
+}
+
+#pastor-feature-bio {
+  cursor: pointer;
+}
+
+#pastor-feature-img {
+  cursor: pointer;
 }
