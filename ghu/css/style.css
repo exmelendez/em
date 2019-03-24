@@ -88,6 +88,9 @@ MOBILE ROOT
 
     /* MAP - MOBILE | about.html */
     --map-box-flex-pos: center;
+
+    /* WATCH CONTAINER - MOBILE | watch.html */
+    --watch-main-cont-height: 15em;
 }
 
 * {
@@ -190,8 +193,11 @@ FULL ROOT
     --read-more-visability: none;
     --bio-extra-visability: inline;
 
-    /* MAP - MOBILE | about.html */
+    /* MAP - FULL | about.html */
     --map-box-flex-pos: flex-start;
+
+    /* WATCH CONTAINER - FULL | watch.html */
+    --watch-main-cont-height: 38em;
   }
 
   nav {
@@ -398,6 +404,14 @@ MAP SECTION - FULL - about.html
 ******************************************/
 #mapSection {
   align-items: var(--map-box-flex-pos);
+}
+
+/*****************************************
+WATCH SECTION - FULL - WATCH.HTML
+******************************************/
+
+#watchMainContainer {
+  height: var(--watch-main-cont-height);
 }
 
 
@@ -958,10 +972,6 @@ WHY WE DO SECTION - MOBILE - about.html
   margin-left: 15px;
 }
 
-.active, .collapsible:hover {
-  /* background-color: #555; */
-}
-
 .content {
   padding: 0 18px;
   display: none;
@@ -1166,6 +1176,34 @@ MAP SECTION - MOBILE - about.html
 
 .addressBox p:nth-child(5) {
   margin-top: 1.5em;
+}
+
+/*****************************************
+WATCH SECTION - MOBILE - WATCH.HTML
+******************************************/
+
+#watchMainContainer {
+  padding-top: 2em;
+  width: 100%;
+  height: var(--watch-main-cont-height);
+  background-color: var(--colorDarkOrange);
+}
+
+#watchSection {
+  width: 80%;
+}
+
+#watchContainer {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+#watchContainer iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 /*****************************************
