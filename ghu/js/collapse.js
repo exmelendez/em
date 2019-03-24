@@ -24,14 +24,12 @@ btn.addEventListener("click", () => {
   
   if (btnVal === "active") {
       document.getElementById("more-bio-btn").value = "not-active";
-      // btn.innerHTML = "Read less"; 
       readLessSection.style.display = "inline";
       readMoreSection.style.display = "none";
       moreText.style.display = "inline";
   
   } else {
       document.getElementById("more-bio-btn").value = "active";
-      // btn.innerHTML = "Read more"; 
       readLessSection.style.display = "none";
       readMoreSection.style.display = "inline";
       moreText.style.display = "none";
